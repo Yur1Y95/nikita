@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>= анкета =</title>
+<meta charset="utf-8">
+<style>
+	[type="submit"] {
+		background: green;
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+	}
+	[type="reset"] {
+		background: red;
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+	}
+	input:invalid {background: red;}
+	input:valid {background: green;}
+	#error {color:red; display:none;}
+</style>
+<script>
+function validate() {
+a=document.getElementById("a").value;
+b=document.getElementById("b").value;
+if (a !== b) {
+	document.getElementById("error").style.display="inline";
+}
+else {
+	document.getElementById("error").style.display="none";	
+}
+}
+</script>
+</head>
+
+<body>
+	<div class="wrapper">
+        <header>
+            <h2> Наш замечательный сайт</h2>
+            <nav class="menu-top">
+                <ul>
+                    <li><a href="index.html">Основная
+                        </a></li>
+                    <li><a href="form.html">Регистрация</a></li>
+                </ul>
+            </nav>
+        </header>
+        <nav class="menu-left">
+            <ul>
+                <li><a href="intro.html">
+                        Блочные и текстовые элементы
+                    </a></li>
+                <li><a href="links.html">
+                        Cсылки</a></li>
+
+                <li><a href="pict.html">
+                        Иллюстрации</a>
+
+                    <a href="lists.html">
+                        Списки в HTML</a></li>
+
+                <li><a href="tables.html">
+                        Таблицы</a></li>
+                <li><a href="css1.html">Стили CSS</a></li>
+            </ul>
+        </nav>
+
+
+        <main>
+<h1>Регистрация</h1>
+<form action="" method="get">
+<pre>
+Фамилия <input type="text" name="fam" placeholder="Введите заглавными буквами" autofocus required>
+
+E-mail <input type="email" name="email">
+Телефон <input type="tel" pattern="\+\d-\d{3}-\d{7}">
+
+Пароль <input type="password" name="password" id="a" onblur="validate()">
+Повторите пароль <input type="password" name="password1" id="b"  onblur="validate()"> <span id="error">Пароли не совпадают</span>
+
+Округ Москвы
+<select name="okrug">
+	<optgroup label="1 группа">
+		<option value="1">центральный</option>
+		<option value="2">южный </option>
+		<option value="3">юго-западный</option>
+		<option value="4" disabled>западный</option>
+		<option value="5">северо-западный</option>
+	</optgroup>
+	<optgroup label="2 группа">
+		<option value="6">северный </option>
+		<option value="7">северо-восточный</option>
+		<option value="8">юго-восточный</option>
+		<option value="9">восточный</option>
+	</optgroup>
+	<option value="0" selected>не выбран</option>
+</select>
+Пол
+<input type="radio" name="pol" value="0" checked>не указан 
+<input type="radio" name="pol" value="1" accesskey="м">М 
+<input type="radio" name="pol" value="2" accesskey="ж">Ж 
+
+<fieldset><legend>Ваши интересы</legend>
+<label><input type="checkbox" name="i" value="1">Компьютеры</label> 
+<label><input type="checkbox" name="i" value="2">Автомобили</label> 
+<label><input type="checkbox" name="i" value="3">Спорт</label> 
+<label><input type="checkbox" name="i" value="4">Живопись</label>
+<label><input type="checkbox" name="i" value="5">Музыка</label>
+<label><input type="checkbox" name="i" value="6">Книги</label>
+<label><input type="checkbox" name="i" value="7">Философия</label>
+<label><input type="checkbox" name="i" value="8">Религия</label>
+<label><input type="checkbox" name="i" value="9">Психология</label>
+<label><input type="checkbox" name="i" value="10">Астрология</label>
+</fieldset>
+Какие сайты Вы посещали в последнее время чаще
+<select name="sait" multiple size="10">
+<option value="1">новостные</option>
+<option value="2">юморные</option>
+<option value="3">эротические</option>
+<option value="4">тематические</option>
+<option value="5">музыкальные</option>
+<option value="6">метео</option>
+<option value="7">гео</option>
+<option value="8">био</option>
+<option value="9">дуо</option>
+<option value="10">эко</option>
+</select>	
+Несколько слов о себе 
+<textarea name="about" rows="10" cols="30"></textarea>
+
+Фото профиля <input type="file" name="file">
+
+<button type="reset">очистка<br>формы</button>
+<button type="submit"><h3>регистрация</h3></button>
+
+</pre>
+</form>
+</main>
+<aside>Реклама</aside>
+<footer>Footer</footer>
+</div>
+</body>
+</html>

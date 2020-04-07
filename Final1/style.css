@@ -1,0 +1,43 @@
+/* Стили */
+* {box-sizing: border-box;}
+html {font-size: 14px;
+font-family: Arial, Helvetica, sans-serif;}
+body {background: url(images/fon2.gif) !important;}
+.wrapper {width:90%;
+margin: auto;
+border: 1px solid;
+}
+header {height: 100px;
+background: #ccc;}
+/* параментры макета*/
+.menu-left {width: 150px;
+float: left;
+}
+aside {
+    width: 120px;
+    float: left;
+}
+main {width: calc(100% - 270px);
+float: left;}
+header h2 {margin: 0;
+padding: 1em;}
+footer {height: 50px;
+background: #ccc;
+clear: both;}
+
+/* Версия для печати*/
+@media print {
+    .nav-left, aside {display: none;}
+    .wrapper,main {width:100%;}
+    * {color: black !important;}
+}
+/* Медиа для мобильного */
+@media screen and (max-width: 700px)
+{
+    nav, main, aside {
+    float: none !important;
+    width: 100% !important;}
+    .wrapper {
+        width:100%;
+    }
+}

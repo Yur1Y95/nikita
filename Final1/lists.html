@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>=== Списки в HTML ===</title>
+<meta charset="utf-8">
+<style>
+.list-0 {color:blue}
+.list-1 {color:green}
+.list-1  span {color: black}
+/* обрабатываем список .mixed */
+.mixed {color:red}
+.mixed ul {color:blue}
+.mixed ul ul{font-size:80%; color: green}
+</style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+        <h2> Наш замечательный сайт</h2>
+        <nav class="menu-top">
+            <ul>
+                <li><a href="index.html">Основная
+                    </a></li>
+                <li><a href="form.html">Регистрация</a></li>
+            </ul>
+        </nav>
+    </header>
+    <nav class="menu-left">
+        <ul>
+            <li><a href="intro.html">
+                    Блочные и текстовые элементы
+                </a></li>
+            <li><a href="links.html">
+                    Cсылки</a></li>
+
+            <li><a href="pict.html">
+                    Иллюстрации</a>
+
+                <a href="lists.html">
+                    Списки в HTML</a></li>
+
+            <li><a href="tables.html">
+                    Таблицы</a></li>
+            <li><a href="css1.html">Стили CSS</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+<h1>Введение в списки</h1>
+
+Списки могут содержать:
+<ul class="list-0">
+<li>Неупорядоченную информацию (маркированный список - UL)</li> 
+<li>Упорядоченную информацию (нумерованный список - OL) </li> 
+<li>Определения (спискок определений - DL) </li> 
+</ul>
+
+<h2>1. Маркированный список UL</h2>
+
+Маркеры списка
+<!-- содержимое списка -->
+<ul class="list-1">
+	<li style="list-style-type: disc;">
+		<span>Диск (type="disc")</span>
+	</li>
+	<li style="list-style-type: circle;">
+		<span>Кружок (type="circle")</span>
+	</li>
+	<li style="list-style-type: square;">
+		<span>Квадрат (type="square")</span>
+	</li>
+</ul>
+<h2>2. Нумерованный список OL</h2>
+
+Атрибуты списка:
+<!-- содержимое списка -->
+<ol start="1" style="list-style:upper-latin;">
+<li>START - номер первого элемента</li>
+<li>TYPE - тип нумерации (1,a,A,i,I)</li>
+<li>reversed - обратная нумерация </li>
+</ol>
+
+<h2>3. Спискок определений DL</h2>
+
+Список терминов
+	<!-- содержимое списка -->
+<dl>
+	<dt>HTML</dt>
+	<dd>HyperText Markup Language - язык разметки</dd>
+	<dt>CSS</dt>
+	<dd>Cascading Style Sheets - таблицы стилей</dd>
+	<dt>XML</dt>
+	<dd>eXtensible Markup Language - расширяемый язык разметки</dd>
+	<dt>XSL</dt>
+	<dd>eXtensible Stylesheet Language - расширяемый язык описания стилей</dd>
+</dl>
+<h2>4. Смешанный список</h2>
+
+<!-- содержание -->
+Основные разделы сайта
+<ol class="mixed">
+  <li>
+    Информация о фирме
+    <ul>
+      <li>деятельность фирмы</li>
+      <li>история фирмы</li>
+      <li>контактная информация
+        <ul>
+          <li>адрес</li>
+          <li>телефон</li>
+          <li>email</li>
+        </ul>
+      </li>
+      <li>партнеры и клиенты</li>
+      <li>пресса о фирме</li>
+    </ul>
+  </li>
+  <li>
+    Продукция
+    <ul>
+      <li>список товаров и услуг</li>
+      <li>описание товара (краткое и подробное)</li>
+      <li>специальное предложение</li>
+      <li>заказ товара</li>
+      <li>система скидок</li>
+    </ul>
+  </li>
+  <li>Новости
+    <ul>
+      <li>новинки продукции (кратко и подробно)</li>
+      <li>прошедшие мероприятия</li>
+      <li>анонсы событий</li>
+    </ul>
+  </li>
+  <li>
+    Сервис<ul>
+      <li>дополнительные услуги</li>
+      <li>поддержка продукции</li>
+      <li>консультации и обратная связь</li>
+      <li>обучение и сертификация</li>
+    </ul>
+  </li>
+  <li>Интерактивы
+    <ul>
+      <li>регистрация</li>
+      <li>поиск</li>
+      <li>опрос</li>
+      <li>конференции</li>
+      <li>заказ</li>
+      <li>обслуживание корзины</li>
+    </ul>
+  </li>
+  <li>
+    Реклама
+    <ul>
+      <li>баннеры</li>
+      <li>popup-окна</li>
+      <li>rich-media ролики</li>
+    </ul>
+  </li>
+</ol>
+</main>
+<aside>Реклама</aside>
+<footer>Footer</footer>
+</div>
+</body>
+</html>
+
+
+
+
